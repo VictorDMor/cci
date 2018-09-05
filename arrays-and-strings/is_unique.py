@@ -3,10 +3,10 @@
 def is_unique(word):
     unique = True
     for i in range(len(word)-1):
-        if word[i] == word[i+1]:
+        if sorted(word)[i] == sorted(word)[i+1]:
             unique = False
             break
     return unique
 
-print(is_unique(sorted("arara")))
-print(is_unique(sorted("frango")))
+print(is_unique("root"))
+print(is_unique("algorithm"))
